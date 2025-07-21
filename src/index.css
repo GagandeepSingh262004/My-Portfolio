@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Teko:wght@300..700&display=swap");
+@import "tailwindcss";
+@theme {
+  --font-ital: "Josefin Sans", sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
+
+.cards {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  gap: 0px; /* overlap cards */
+}
+
+.card {
+  position: absolute; /* so they can overlap */
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card1 {
+  background-color: #353c45;
+  transform: translateX(-280px) translateY(25px) rotate(-10deg);
+  z-index: 4;
+}
+
+.card2 {
+  background-color: #3178c6;
+  transform: translateX(-50px) rotate(-5deg);
+  z-index: 3;
+}
+
+.card3 {
+  background-color: #e1ffde;
+  transform: translateX(180px) rotate(3deg);
+  z-index: 2;
+}
+
+.card4 {
+  background-color: #2d2d2d;
+  transform: translateX(370px) translateY(20px) rotate(7deg);
+  z-index: 1;
+}
+
+/* Desktop (overlapping cards) */
+@media (min-width: 768px) {
+  .cards {
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    gap: 0;
+  }
+
+  .card {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .card1 {
+    transform: translateX(-280px) translateY(25px) rotate(-10deg);
+    z-index: 4;
+  }
+
+  .card2 {
+    transform: translateX(-50px) rotate(-5deg);
+    z-index: 3;
+  }
+
+  .card3 {
+    transform: translateX(180px) rotate(3deg);
+    z-index: 2;
+  }
+
+  .card4 {
+    transform: translateX(370px) translateY(20px) rotate(7deg);
+    z-index: 1;
+  }
+}
+
+/* Mobile (stack cards vertically) */
+@media (max-width: 767px) {
+  .cards {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* ✅ Ensure they're centered in a row */
+    position: relative;
+    height: auto;
+    gap: 1.5rem; /* ✅ Adjust spacing between cards */
+    flex-wrap: wrap; /* ✅ In case screen is too small, cards will wrap */
+  }
+
+  .card {
+    position: relative;
+    transform: none;
+    z-index: auto;
+    height: 140px;
+    width: 140px;
+    object-fit: cover;
+  }
+
+  .card1 {
+    transform: translateX(0px) translateY(0px) rotate(0deg);
+    z-index: 4;
+  }
+
+  .card2 {
+    transform: translateX(0px) rotate(0deg);
+    z-index: 3;
+  }
+
+  .card3 {
+    transform: translateX(0px) rotate(0deg);
+    z-index: 2;
+  }
+
+  .card4 {
+    transform: translateX(0px) translateY(0px) rotate(0deg);
+    z-index: 1;
+  }
+}
