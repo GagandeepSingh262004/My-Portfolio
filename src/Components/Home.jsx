@@ -266,7 +266,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="w-full h-screen  home ">
+      <div className="w-full h-[90vh] sm:h-[60vh] md:h-[70vh] lg:h-screen home">
         <div className="w-full px-4 md:px-10 lg:px-20 flex flex-col items-center text-center pt-10 font-ital">
           <p className="fade-in text-sm sm:text-base md:text-lg font-semibold italic">
             New Delhi, India
@@ -316,7 +316,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="h-full w-full about px-4 sm:px-6 md:px-8 pt-4  flex flex-col">
+      <div className="h-full w-full about px-4 sm:px-6 md:px-8 pt-4 flex flex-col">
         <h2 className="uppercase font-medium font-ital text-4xl sm:text-5xl md:text-6xl">
           About Me
         </h2>
