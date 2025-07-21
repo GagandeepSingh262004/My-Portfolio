@@ -316,7 +316,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="h-full w-full about px-4 sm:px-6 md:px-8 pt-24 flex flex-col">
+      <div className="h-full w-full about px-4 sm:px-6 md:px-8 pt-4  flex flex-col">
         <h2 className="uppercase font-medium font-ital text-4xl sm:text-5xl md:text-6xl">
           About Me
         </h2>
@@ -396,9 +396,12 @@ const Home = () => {
           {/* Project 1 */}
           <div className="bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div className="w-full h-64 bg-gray-100 rounded-t-lg flex items-center justify-center">
-              <div className="text-gray-500">
-                <Zap className="w-16 h-16 mx-auto mb-2" />
-                <p className="text-sm">OMDB Movie Search</p>
+              <div className="text-gray-500 p-4">
+                <img
+                  src="/Omdb.png"
+                  alt="OMDB Movie Search App"
+                  className="rounded-lg"
+                />
               </div>
             </div>
             <div className="p-6">
@@ -438,9 +441,8 @@ const Home = () => {
           {/* Project 2 */}
           <div className="bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div className="w-full h-64 bg-gray-100 rounded-t-lg flex items-center justify-center">
-              <div className="text-gray-500 text-center">
-                <Database className="w-16 h-16 mx-auto mb-2" />
-                <p className="text-sm">Learning Management System</p>
+              <div className="text-gray-500 p-4">
+                <img src="/LMS.png" className="rounded-lg" alt="LMS System" />
               </div>
             </div>
             <div className="p-6">
@@ -481,8 +483,13 @@ const Home = () => {
           <div className="bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
             <div className="w-full h-64 bg-gray-100 rounded-t-lg flex items-center justify-center">
               <div className="text-gray-500 text-center">
-                <div className="text-6xl mx-auto mb-2">✨</div>
-                <p className="text-sm">Feninso Fashion</p>
+                <div className="text-gray-500 p-4">
+                  <img
+                    src="/Feninso.png"
+                    className="rounded-lg"
+                    alt="Feninso Fashion"
+                  />
+                </div>
               </div>
             </div>
             <div className="p-6">
