@@ -41,6 +41,8 @@ const Home = () => {
           alert("Message sent successfully!");
         },
         (error) => {
+          alert("Message can not be Send ,Please try again some time");
+
           console.log("FAILED...", error.text);
         }
       );
