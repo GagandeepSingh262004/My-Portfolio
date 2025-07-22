@@ -32,12 +32,13 @@ const Home = () => {
       .then(
         () => {
           console.log("SUCCESS!");
-          // alert("Message sent successfully! (Demo mode)");
+
           setEmailData({
             name: "",
             email: "",
             message: "",
           });
+          alert("Message sent successfully!");
         },
         (error) => {
           console.log("FAILED...", error.text);
